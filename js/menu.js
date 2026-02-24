@@ -6,8 +6,8 @@ menuToggle.addEventListener("click", () => {
     navBar.classList.toggle("active");
 
     if (navBar.classList.contains("active")) {
-        iconoMenu.src = "../imagenes/close.png";
+        iconoMenu.src = "/imagenes/close.png";
     } else {
-        iconoMenu.src = "../imagenes/open.png";
+        iconoMenu.src = "/imagenes/open.png";
     }
 });
