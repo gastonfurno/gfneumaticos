@@ -16,6 +16,10 @@ ul, a {
     text-decoration: none;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 /*----- HEADER -----*/
 header {
     background-color: #fff;
@@ -51,6 +55,78 @@ header {
     color: #999;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+
+.menu-toggle img {
+    width: 30px;
+}
+@media (max-width: 1100px) {
+
+header {
+        position: relative;
+        padding: 10px 20px;
+    }
+main {
+    padding: 0 15px;
+}
+
+.logo-header img {
+        max-width: 200px;
+    }
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1rem;
+    
+}  
+
+
+}
+@media (max-width: 800px) {
+
+    .logo-header img {
+        max-width: 130px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    .nav-bar {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-bar.active {
+        max-height: 400px;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+    }
+}
 /*----- MAIN -----*/
 main {
     background-color: #fff;
@@ -105,84 +181,120 @@ main {
     color: #fff;
 }
 
+@media (max-width: 990px) {
+
+    .contenedor-principal {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card-home {
+        width: 100%;
+        height: 300px;
+    }
+
+    .card-home h3 {
+        font-size: 2rem;
+    }
+
+    .card-home p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 485px) 
+{
+.card-home p {
+        display: none;
+    } 
+}
 
 /*----- FOOTER -----*/
 .footer-container {
     display: flex;
+    margin: auto;
+    padding: 20px;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    font-size: 0.85rem;
-    color: var(--txt-color);
     border-top: 1px solid rgba(0,0,0,0.08);
-    margin-top: 10px;
 }
 
-.redes-sociales-footer, .contacto-footer, .normas-footer {
+.redes-sociales-footer {
     display: flex;
+    width: 40% ;
     flex-direction: column;
-    gap: 12px;
-    flex: 1;
+    text-align: center;
 }
 
-.redes-sociales-footer li {
-    gap: 8px;
-    opacity: 0.7;
+.logo-footer img {
+    width: 40%;
 }
 
-.redes-sociales-footer li:hover {
-    opacity: 1;
-    cursor: pointer;
+.footer-redes a {
+    padding: 0 20px;
 }
 
-.item-footer {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
+.footer-redes img {
+    width: 40px;
+    transition: filter 0.3s ease;
 }
 
-.item-footer:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
-.footer-container img, .info-contacto img {
-    width: 30px;
-    padding: 10px;
+.footer-redes img:hover {
+    filter: brightness(0.6);
     
 }
 
+.item-footer a{
+    color: var(--txt-color);
+}
+
+.item-footer a:hover {
+    color: #020101;
+    cursor: pointer;
+}
+
 .normas-footer {
-    font-size: 0.75rem;
-    text-align: right;
-    color: var(--txt-color);
+    align-items: center;
 }
 
-.normas-footer li {
-    line-height: 1.6;
-}
+@media (max-width: 768px) {
 
-.normas-footer a {
-    color: var(--txt-color);
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .contacto-footer iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .redes-sociales-footer {
+        width: 100%;
+    }
+
+    .logo-footer img {
+        width: 120px;
+    }
+
+    .footer-redes img {
+        width: 35px;
+    }
 }
 
 /*----- Contacto -----*/
 .form-contenedor {
     display:flex;
-    width: 50%;
-    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border-radius: 10px;
-    margin-top: 10px;
     padding: 40px;
     gap: 40px;
 }
-
 
 .form-presentacion {
     width: 60%;
@@ -205,19 +317,9 @@ main {
     font-size: 1.05rem;
 }
 
-.info-contacto img {
-    width: 40px;
-    filter: grayscale(100%);
-    opacity: 0.6;
+.active-titulo-responsive {
+    display: none;
 }
-.info-contacto {
-    gap: 15px;
-}
-
-.info-contacto img:hover {
-    opacity: 1;
-}
-
 
 .formulario {
     margin-top: 20px;
@@ -252,7 +354,7 @@ main {
 
 .formulario input:focus,
 .formulario textarea:focus {
-    border-bottom: 2px solid rgba(175, 13, 13, 0.89);
+    border-bottom: 2px solid #555;
 }
 
 .button-form {
@@ -296,6 +398,66 @@ main {
     border-color: #555;
 }
 
+@media (max-width: 1250px) {
+    .formulario input,
+    .formulario textarea {
+        font-size: 0.7rem;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .form-contenedor {
+        width: 90%;
+    }
+    
+    .button-form {
+        padding: 10px;
+    }
+    .form-presentacion {
+        width: 50%;
+        padding-right: 10px;
+    }
+
+    .form-presentacion h2{
+        font-size: 1.7rem;
+    }
+
+    .form-presentacion p{
+        font-size: .85rem;
+        line-height: 1.2;
+    }
+}
+    @media (max-width: 850px) {
+    .form-contenedor {
+        flex-direction: column;
+        align-items: center; 
+        width: 80%;
+    }
+    .formulario {
+        width: 100%;
+    }
+    .form-input-container{
+        margin: auto;
+        width: 80%;
+    }
+
+    .form-presentacion {
+        display: none;
+    }
+
+    .active-titulo-responsive {
+        display: flex;
+        margin: auto;
+        color: var(--txt-color);
+        font-size: 1.7rem;
+        padding-bottom: 15px;
+    }
+
+    .button-form {
+        margin: auto;
+    }
+}
 
 /*----- Condicones - Nosotros - devolucion -----*/
 .condiciones {
@@ -316,6 +478,11 @@ main {
     font-size: 1.8rem;
 }
 
+@media (max-width: 1010px){
+    .condiciones {
+        width: 90%;
+    }
+}
 /*----- Manteniemiento -----*/
 
 .mantenimiento-container {
@@ -414,6 +581,39 @@ letter-spacing: 1.2px;
 padding: 5px;
 }
 
+@media (max-width: 1100px){
+    .servicio h3 {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .servicio p{
+        font-size: 0.8rem;
+        letter-spacing: normal;
+    }
+}
+
+@media (max-width: 950px) {
+
+.servicio-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.servicio {
+    text-align:center;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.servicio:last-child {
+    border-bottom: none;
+}
+.ser-img {
+    display: none;
+}
+
+}
 
 /*----- Prodcutos -----*/
 
@@ -422,13 +622,13 @@ padding: 5px;
     margin: auto;
     justify-content: space-between;
     width: 80%;
+    gap: 20px;
 }
 
 .card-producto {
     display: flex;
     width:100%;
     min-height: 300px;
-    margin: 20px;
     background-size: cover;
     justify-content: center;
     text-align: center;
@@ -437,6 +637,7 @@ padding: 5px;
     font-size: 1.3rem;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
 }
 
 .card-producto a {
@@ -461,6 +662,58 @@ padding: 5px;
 
 .card-producto a:hover {
     color: #666;
+}
+
+.carousel {
+    background-color: #e9ecef;
+    width: 78%;
+    min-height: 350px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    margin: auto;
+}
+
+.carousel-caption {
+    bottom: 10px;
+    margin: auto;
+    color: var(--txt-color);
+    width: 40%;
+    background: rgba(255, 255, 255, 0.932);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+@media (max-width: 1200px){
+
+.card-producto {
+        width: 100%;
+    }
+
+.card-producto h3{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 990px){
+
+    .card-container-prod {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card-producto {
+        width: 100%;
+        margin: 0;
+    }
+}
+@media (max-width: 785px){
+.carousel {
+    display: none;
+}
 }
 
 /*----- Cubiertas Autos -----*/
