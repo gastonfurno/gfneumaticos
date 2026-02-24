@@ -4,14 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const navBar = document.querySelector(".nav-bar");
     const iconoMenu = document.getElementById("icono-menu");
 
-    menuToggle.addEventListener("click", function () {
-        navBar.classList.toggle("active");
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            navBar.classList.toggle("active");
 
-        if (navBar.classList.contains("active")) {
-            iconoMenu.src = "imagenes/close.png";
-        } else {
-            iconoMenu.src = "imagenes/open.png";
-        }
-    });
+            if (navBar.classList.contains("active")) {
+                iconoMenu.src = "imagenes/close.png";
+            } else {
+                iconoMenu.src = "imagenes/open.png";
+            }
+        });
+    }
 
 });
