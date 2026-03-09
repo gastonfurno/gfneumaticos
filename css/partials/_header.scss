@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-family: $font; 
+
+    .logo-header {
+                    img {
+                        max-width: 400px;
+                        }
+                }
+
+    .nav-bar {
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+
+            .list-item {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: $txt-color;
+                    font-weight: 400;
+                    transition: color 0.2s ease;
+                    letter-spacing: 0.5px;
+
+                    &:hover {
+                            color: #999;
+                            }
+                }
+            }
+            }
+
+    }
+
+    .menu-toggle {
+                display: none;
+                cursor: pointer;
+                img {
+                    width: 30px;
+                    }
+                }
+
+}

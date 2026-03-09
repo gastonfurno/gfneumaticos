@@ -1,0 +1,56 @@
+.titulo-pag {
+    text-align: center;
+    font-family: $font;
+    color: $txt-color;
+    font-size: 2.3rem;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.contenedor-principal {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: $font; 
+
+    .card-home {
+                width: 30%;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                border-radius: 5px;
+                justify-content: center;
+                text-align: center;
+                background-position: center;
+                background-size: cover;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                        transform: scale(1.02);
+                        box-shadow:  5px 5px 10px #666;
+                        }
+
+                &.contenedor-producto {
+                                    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../imagenes/neumaticos.jpg);
+                                    }
+
+                &.contenedor-servicio {
+                                    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../imagenes/servicio.jpg);
+                                    }
+
+                &.contenedor-mantenimiento {
+                                        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../imagenes/mantenimiento.jpg);
+                                            }
+                h3 {
+                    font-size: 2.5rem;
+                    color: #fff;
+                    }
+
+                p {
+                font-size: 1.5rem;
+                color: #fff;
+                }
+            }
+}   

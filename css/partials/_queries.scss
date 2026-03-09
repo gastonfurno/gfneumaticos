@@ -1,0 +1,357 @@
+/*----- HEADER -----*/
+
+/* ----- HEADER ----- */
+
+@media (max-width: 1100px) {
+  header {
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  .logo-header {
+    img {
+      max-width: 200px;
+    }
+  }
+
+  .nav-bar {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+
+  header {
+
+    .logo-header img {
+      max-width: 130px;
+    }
+
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1001;
+    }
+
+    .nav-bar {
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+      }
+
+    }
+
+  }
+
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    &.active {
+      max-height: 400px;
+    }
+  }
+}
+/* ----- MAIN ----- */
+
+@media (max-width: 990px) {
+
+  .contenedor-principal {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    .card-home {
+      width: 100%;
+      height: 300px;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 485px) {
+  .card-home {
+    p {
+      display: none;
+    }
+  }
+}
+
+/* ----- FOOTER ----- */
+
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+
+    iframe {
+      width: 100%;
+      height: 200px;
+    }
+
+    .redes-sociales-footer {
+      width: 100%;
+    }
+  }
+
+  .logo-footer {
+    img {
+      width: 120px;
+    }
+  }
+
+  .footer-redes {
+    img {
+      width: 35px;
+    }
+  }
+}
+
+/* ----- CONTACTO ----- */
+
+@media (max-width: 1000px) {
+
+  .form-contenedor {
+    width: 90%;
+    gap: 25px;
+  }
+
+  .form-presentacion {
+    width: 50%;
+    padding-right: 20px;
+
+    h1 {
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+
+  .formulario {
+    width: 50%;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .form-contenedor {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 30px;
+  }
+
+  .form-presentacion {
+    display: none;
+  }
+
+  .formulario {
+    width: 100%;
+    align-items: center;
+  }
+
+  .form-input-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .form-input-container input,
+  .form-input-container textarea {
+    font-size: 1rem;
+  }
+
+  .active-titulo-responsive {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .button-form {
+    margin-top: 20px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .form-contenedor {
+    padding: 20px;
+  }
+
+  .form-input-container input,
+  .form-input-container textarea {
+    font-size: 0.95rem;
+  }
+
+}
+
+/* ----- CONDICIONES / NOSOTROS / DEVOLUCION ----- */
+
+@media (max-width: 1010px) {
+  .condiciones {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .servicio {
+
+    h3 {
+      font-size: 1.5rem;
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.8rem;
+      letter-spacing: normal;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+
+  .servicio-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .servicio {
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .ser-img {
+    display: none;
+  }
+}
+
+/* ----- PRODUCTOS ----- */
+
+@media (max-width: 1200px) {
+
+  .card-producto {
+    width: 100%;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+
+  .card-container-prod {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-producto {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 785px) {
+
+  .carousel {
+    display: none;
+  }
+}
+
+/* ----- Mantenimiento ----- */
+
+@media (max-width: 1100px) {
+    .mantenimiento-container {
+        flex-wrap: wrap;
+    }
+
+    .card-mant {
+        width: 48%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .mantenimiento-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-mant {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .titulo-pag {
+        font-size: 1.8rem;
+    }
+
+    .card-mant {
+
+        .card-mant-img {
+            height: 180px;
+        }
+
+        .card-mant-description {
+
+            h3 {
+                font-size: 1.05rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+
+        }
+    }
+
+}
