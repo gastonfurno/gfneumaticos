@@ -1,7 +1,9 @@
+@use "variables" as v;
+
 .titulo-pag {
     text-align: center;
-    font-family: $font;
-    color: $txt-color;
+    font-family: v.$font;
+    color: v.$txt-color;
     font-size: 2.3rem;
     font-weight: 400;
     padding: 10px 0;
@@ -12,7 +14,7 @@
     margin: auto;
     justify-content: space-between;
     padding: 20px;
-    font-family: $font; 
+    font-family: v.$font; 
 
     .card-home {
                 width: 30%;
@@ -43,7 +45,7 @@
                 &.contenedor-mantenimiento {
                                         background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../imagenes/mantenimiento.jpg);
                                             }
-                h3 {
+                h2 {
                     font-size: 2.5rem;
                     color: #fff;
                     }

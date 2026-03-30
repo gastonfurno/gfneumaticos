@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 .footer-container {
     display: flex;
     margin: auto;
@@ -34,7 +36,7 @@
     
     .item-footer {
                 a {
-                    color:$txt-color;   
+                    color:v.$txt-color;   
                 
                 &:hover {
                         color: #020101;
